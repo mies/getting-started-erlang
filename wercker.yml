@@ -1,0 +1,9 @@
+box: mies/erlang
+build:
+  steps:
+    - script:
+        name: erlang compilation
+        code: erlc hello.erl
+    - script:
+        name: execute!
+        code: erl -noshell -s hello start -s init stop
